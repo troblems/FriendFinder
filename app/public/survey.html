@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Developer Friend Finder Survey!</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+  <h2>Choose your preference! Please remember this is all in fun, and not all possible choices are listed!</h2>
+  <h3>All sections are required.</h3>
+  <h3><strong>About You</strong></h3>
+        <h4>Name</h4>
+        <input type="text" name="name" id="name" required>
+        <h4>Link to Photo Image</h4>
+        <input type="url" name="photo" id="photo" pattern="https?://.+" required>
+
+  <div class="section">
+    <p>1) I feel the need to be caffinated before I program</p>
+    <select data-placeholder="1" id="q1" class="validate" required>
+             <option value="1">1 (Strongly Disagree)</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>2) I prefer Mac over PC.</p>
+    <select data-placeholder="1" id="q2" class="validate" required>
+           <option value="1">1 (Strongly Disagree)</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>3) Javascript is the best programming language.</p>
+    <select data-placeholder="1" id="q3" class="validate" required>
+             <option value="1">1 (Strongly Disagree)</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>4) Atom is the best text editor.</p>
+    <select data-placeholder="1" id="q4" class="validate" required>
+           <option value="1">1 (Strongly Disagree)</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>5) I prefer to work solo, rather than in a team.</p>
+    <select data-placeholder="1" id="q5" class="validate" required>
+           <option value="1">1 (Strongly Disagree)</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>6) I'd rather use a framework like Bootstrap, than make something custom</p>
+    <select data-placeholder="1" id="q6" class="validate" required>
+           <option value="1">1 (Strongly Disagree)</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>7) I don't see well! I need a larger font.</p>
+    <select data-placeholder="1" id="q7" class="validate" required>
+             <option value="1">1 (Strongly Disagree)</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>8) I code in my spare time for fun!</p>
+    <select data-placeholder="1" id="q8" class="validate" required>
+           <option value="1">1 (Strongly Disagree)</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="section">
+    <p>9) I stay up late and code.</p>
+    <select data-placeholder="1" id="q9" class="validate" required>
+             <option value="1">1 (Strongly Disagree)</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+
+  <div class="selection">
+    <p>10) I prefer to hang out and code, rather than going home and working in relative quiet.</p>
+    <select data-placeholder="1" id="q10" class="validate" required>
+           <option value="1">1 (Strongly Disagree)</option>
+           <option value="2">2</option>
+           <option value="3">3</option>
+           <option value="4">4</option>
+           <option value="5">5 (Strongly Agree)</option></select>
+  </div>
+  <button class="waves-effect waves-light btn-large" id="submit" type="button">
+					Find Dev Friend!
+				</button>
+        <a class="btn btn-floating btn-large cyan pulse"><i class="material-icons">edit</i></a>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+<script>
+//friend construction, yo.
+var input
+{
+name: $("#name").val(),
+photo: $("#photo").val(),
+scores:
+[
+  $("#q1").val(),
+  $("#q2").val(),
+  $("#q3").val(),
+  $("#q4").val(),
+  $("#q5").val(),
+  $("#q6").val(),
+  $("#q7").val(),
+  $("#q8").val(),
+  $("#q9").val(),
+  $("#q10").val()
+]
+}
+</script>
+</html>
