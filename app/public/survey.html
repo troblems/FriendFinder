@@ -15,6 +15,25 @@
 
 <body>
 
+  <div id="resultsModal" class="modal" role="dialog">
+          <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h2 class="modal-title"><strong>Below Is Your New Friend</strong></h2>
+                  </div>
+                  <div class="modal-body">
+                      <h2 id="friendName"></h2>
+                      <img id="friendPhoto" src="" alt="">
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
   <h2>Choose your preference! Please remember this is all in fun, and not all possible choices are listed!</h2>
   <h3>All sections are required.</h3>
   <h3><strong>About You</strong></h3>
@@ -132,6 +151,8 @@
 </body>
 
 <script>
+ $('#submit').on("click ", function()
+ {
 //friend construction, yo.
 var input
 {
@@ -151,5 +172,13 @@ scores:
   $("#q10").val()
 ]
 }
+$.post(currentURL + "/api/friends ", friendInput, function(data)
+            {
+              $("#friendName ").text(data.name);
+              $('#friendPhoto').attr("src", data.photo);
+              // Show the modal with your new friend
+              $("#resultsModal ").modal('toggle');
+            }
+          }
 </script>
 </html>

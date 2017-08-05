@@ -1,16 +1,23 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "App to find friends!",
+  "description": "helps you find friends!",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "materialize-css": "^0.100.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/troblems/FriendFinder.git"
   },
-  "author": "",
+  "author": "Amanda Wittenstein",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/troblems/FriendFinder/issues"
